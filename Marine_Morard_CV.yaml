@@ -12,7 +12,7 @@ cv:
   sections:
     Profil:
       - >-
-        Ingénieure SRE Senior avec près de 10 ans d'expérience en production sur des infrastructures cloud souveraines et critiques (3DS Outscale, S3NS — SecNumCloud, ISO 27001, HDS). Spécialisée sur le cycle complet build/run des plateformes Kubernetes (KaaS), Compute et IaaS, la gestion d'incidents majeurs (P0/P1), le MCO/MCS et l'automatisation (Python, Bash, Terraform, SaltStack). Orientée terrain, mentoring technique et élimination du toil, avec un fort investissement sur l'infrastructure IA et les approches AIOps / LLM-Ops (agents, protocole MCP).
+        Ingénieure SRE Senior avec près de 10 ans d'expérience en production sur des infrastructures cloud souveraines et critiques (3DS Outscale, S3NS — SecNumCloud, ISO 27001, HDS). Spécialisée sur le cycle complet build/run des plateformes Kubernetes (CAPI, KaaS), Compute et IaaS, la gestion d'incidents majeurs (P0/P1), la résilience multi-DC et l'automatisation (Python, Bash, Nix/NixOS, Terraform, SaltStack). Orientée terrain, mentoring technique et élimination du toil, avec un fort investissement sur l'infrastructure IA et les approches AIOps / LLM-Ops (agents, protocole MCP).
 
     Expériences professionnelles:
       - company: Thales Cloud Sécurisé (S3NS)
@@ -22,11 +22,10 @@ cv:
         location: Paris
         summary: "*Joint-venture Thales & Google Cloud*"
         highlights:
-          - Pilotage opérationnel (MCO/MCS) et haute disponibilité d'un périmètre critique couvrant les infrastructures Compute (GCE, Borg, GKE) et les plateformes IA (Vertex AI, Gemini 1P & 3P).
-          - Intégration et exploitation en production d'instances GPU haute performance (A3) hébergeant la plateforme interne d'outillage IA.
+          - Pilotage opérationnel (MCO/MCS) et haute disponibilité d'un périmètre critique couvrant Compute (GCE, Borg, GKE) et plateformes IA (Vertex AI, Gemini 1P & 3P), incluant les instances GPU A3 de la plateforme interne d'outillage IA.
           - Astreintes 24/7, résolution d'incidents majeurs (P0/P1) de bout en bout, conduite des revues post-incidents (post-mortems) et suivi des plans d'actions.
-          - Développement d'outils internes d'automatisation (Python, Bash) pour réduire le toil ; prototypage de workflows assistés par IA (LLM, protocole MCP) pour accélérer le diagnostic d'incidents.
-          - Encadrement technique et mentoring opérationnel d'une équipe de 7 ingénieurs (CDI et prestataires), et collaboration quotidienne en anglais avec les équipes R&D Google.
+          - Développement d'outils d'automatisation (Python, Bash) pour réduire le toil ; prototypage de workflows assistés par IA (LLM, protocole MCP) pour accélérer le diagnostic d'incidents.
+          - Encadrement technique et mentoring d'une équipe de 7 ingénieurs (CDI et prestataires), et collaboration quotidienne en anglais avec les équipes R&D Google.
 
       - company: Thales Cloud Sécurisé (S3NS)
         position: Ingénieure SRE KaaS / Compute
@@ -34,8 +33,9 @@ cv:
         end_date: 2025-12
         location: Paris
         highlights:
-          - Déploiement, exploitation et fiabilisation en production des services managés Kubernetes (GKE / KaaS) et Compute dans un environnement cloud de confiance.
-          - Définition des indicateurs de fiabilité (SLI/SLO), mise en place de l'observabilité, des runbooks et des procédures d'escalade du build au run.
+          - Construction et exploitation *full GitOps* d'une plateforme KaaS souveraine via Kubernetes Cluster API (CAPI), Nix / NixOS, FluxCD, pipelines Woodpecker CI / Gitea et observabilité Prometheus / Grafana.
+          - "Accompagnement transverse SRE : mise en place d'un cluster de base de données résilient (MariaDB / MaxScale) distribué sur 3 clusters Kubernetes dans 3 datacenters sous contraintes applicatives (iTop)."
+          - Définition des SLI/SLO, runbooks et développement de scripts Bash d'automatisation pour le bootstrap, l'isolation (ISON) et les exercices de résilience / reprise d'activité (DiRT).
 
       - company: 3DS Outscale (Dassault Systèmes)
         position: Lead SRE — Équipe Marketplace
@@ -44,7 +44,7 @@ cv:
         location: Saint-Cloud
         summary: "*Cloud souverain qualifié SecNumCloud, ISO 27001 et HDS*"
         highlights:
-          - Construction from scratch de l'infrastructure de la plateforme Marketplace (architecture, déploiement Kubernetes, automatisation SaltStack, monitoring et alerting de production).
+          - Construction *from scratch* de l'infrastructure de la plateforme Marketplace (architecture, déploiement Kubernetes, Terraform, SaltStack, monitoring et alerting de production).
           - "Première expérience de Lead SRE : structuration des standards d'exploitation et encadrement technique d'une équipe de 2 ingénieurs."
 
       - company: 3DS Outscale (Dassault Systèmes)
@@ -53,17 +53,17 @@ cv:
         end_date: 2022-12
         location: Saint-Cloud
         highlights:
-          - MCO/MCS des plateformes et services critiques du cloud souverain Outscale (IaaS / TINA OS, S3, IAM, Billing — Worldwide et SecNumCloud) ; gestion du cycle de vie de l'orchestrateur TINA OS.
-          - Support technique IaaS N2/N3, diagnostic bas niveau (Linux, QEMU/VMware, réseau, stockage, PostgreSQL, Nginx, HAProxy) et amélioration continue de la résilience des architectures.
-          - Automatisation des déploiements et mises à jour de plateformes publiques et privées (SaltStack, Terraform, Python, Bash, GitLab CI, Consul) ; rôles de Git Master et Release Master.
+          - MCO/MCS des services critiques du cloud souverain Outscale (IaaS / TINA OS, stockage objet S3 Ceph puis Scality, IAM, Billing — Worldwide et SecNumCloud) ; support N2/N3 et diagnostic bas niveau (Linux, QEMU/VMware, PostgreSQL, Nginx, HAProxy).
+          - Pilotage et automatisation de migrations critiques de ressources clientes lors de changements de salles datacenter, ainsi que des communications de maintenance client (Python, Mailchimp puis Brevo).
+          - Automatisation des déploiements de plateformes publiques/privées (SaltStack, Terraform, Python, Bash, GitLab CI, Consul) ; rôles de Git Master et Release Master.
 
     Compétences techniques:
       - label: Cloud Souverain, KaaS & IA
-        details: Kubernetes (GKE), Compute distribué (GCE, Borg), IaaS (TINA OS, S3, EC2, IAM, QEMU, VMware), Instances GPU (A3, fGPUs), Vertex AI / Gemini, conformité SecNumCloud / ISO 27001 / HDS.
-      - label: SRE, Observabilité & Ops
-        details: MCO/MCS, astreintes 24/7, incidents P0/P1, SLI/SLO/SLA, post-mortems, runbooks, Prometheus, Grafana (alerting), Zabbix, PostgreSQL, Nginx, HAProxy, Consul.
-      - label: IaC, Automatisation & Dev
-        details: Python, Bash, Linux, NixOS, Terraform, SaltStack, Ansible, FluxCD, GitLab CI, Git, workflows IA & agents (LLM, protocole MCP, n8n).
+        details: Kubernetes (CAPI, GKE), Compute (GCE, Borg), IaaS (TINA OS, S3 Ceph/Scality, EC2, IAM, QEMU, VMware), GPU (A3, fGPUs), Vertex AI / Gemini, SecNumCloud / ISO 27001 / HDS.
+      - label: SRE, Observabilité & BDD
+        details: MCO/MCS, astreintes 24/7, incidents P0/P1, SLI/SLO/SLA, post-mortems, DiRT/résilience, Prometheus, Grafana (alerting), Zabbix, PostgreSQL, MariaDB / MaxScale, Nginx, HAProxy, Consul.
+      - label: IaC, GitOps & Automatisation
+        details: Python, Bash, Linux, Nix / NixOS, Terraform, SaltStack, Ansible, FluxCD, GitLab CI, Woodpecker CI / Gitea, Git, workflows IA & agents (LLM, protocole MCP, n8n).
       - label: Langues
         details: Français (natif), Anglais (courant technique et professionnel).
 
@@ -77,7 +77,7 @@ cv:
           - "Formation continue : Management (Thales), préparation certification Google Cloud Generative AI Leader, écosystème Kubernetes & AIOps."
 
     Centres d'intérêt:
-      - Apiculture (rucher de 14 ruches, récolte et mise en pot), impression 3D, domotique et automatisation du quotidien (workflows IA, outils & apps perso).
+      - "Apiculture (14 ruches, récolte et mise en pot), impression 3D, domotique, automatisation du quotidien (workflows IA, apps perso) et jeux de factory/stratégie (Factorio, Frostpunk, Cities: Skylines)."
 
 design:
   theme: engineeringclassic
@@ -92,30 +92,30 @@ design:
   typography:
     alignment: left
     font_size:
-      body: 9pt
-      name: 22pt
-      headline: 9.5pt
-      connections: 9pt
-      section_titles: 1.2em
-    line_spacing: 0.48em
+      body: 8.9pt
+      name: 21.5pt
+      headline: 9.4pt
+      connections: 8.9pt
+      section_titles: 1.18em
+    line_spacing: 0.47em
   header:
-    space_below_name: 0.16cm
-    space_below_headline: 0.16cm
-    space_below_connections: 0.3cm
+    space_below_name: 0.15cm
+    space_below_headline: 0.15cm
+    space_below_connections: 0.28cm
   section_titles:
-    space_above: 0.28cm
-    space_below: 0.14cm
+    space_above: 0.26cm
+    space_below: 0.13cm
   sections:
-    space_between_regular_entries: 0.58em
-    space_between_text_based_entries: 0.2em
+    space_between_regular_entries: 0.54em
+    space_between_text_based_entries: 0.18em
   entries:
-    date_and_location_width: 4.6cm
+    date_and_location_width: 4.5cm
     space_between_columns: 0.35cm
     summary:
-      space_above: 0.05cm
+      space_above: 0.04cm
     highlights:
-      space_above: 0.06cm
-      space_between_items: 0.06cm
+      space_above: 0.05cm
+      space_between_items: 0.055cm
   templates:
     single_date: MONTH_NAME YEAR
 
