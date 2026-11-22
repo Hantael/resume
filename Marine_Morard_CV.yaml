@@ -25,7 +25,8 @@ cv:
           - Pilotage opérationnel (MCO/MCS) et haute disponibilité d'un périmètre critique couvrant Compute (GCE, Borg, GKE) et plateformes IA (Vertex AI, Gemini 1P & 3P), incluant les instances GPU A3 de la plateforme interne d'outillage IA.
           - Astreintes 24/7, résolution d'incidents majeurs (P0/P1) de bout en bout, conduite des revues post-incidents (post-mortems) et suivi des plans d'actions.
           - Développement d'outils d'automatisation (Python, Bash) pour réduire le toil ; prototypage de workflows assistés par IA (LLM, protocole MCP) pour accélérer le diagnostic d'incidents.
-          - Encadrement technique et mentoring d'une équipe de 7 ingénieurs (CDI et prestataires), et collaboration quotidienne en anglais avec les équipes R&D Google.
+          - Encadrement technique et mentoring au sein d'une équipe de 9 ingénieurs (CDI et prestataires) ; accompagnement à la montée en compétences d'équipes internationales sur des périmètres similaires (déplacements à l'étranger).
+          - Facilitation de la collaboration et des échanges opérationnels quotidiens en anglais avec les équipes Google (R&D et opérations), avec synchronisation multi-fuseaux horaires (US).
 
       - company: Thales Cloud Sécurisé (S3NS)
         position: Ingénieure SRE KaaS / Compute
