@@ -53,7 +53,7 @@ cv:
         end_date: 2022-12
         location: Saint-Cloud
         highlights:
-          - MCO/MCS des services critiques du cloud souverain Outscale (IaaS / TINA OS, stockage objet S3 Ceph puis Scality, IAM, Billing — Worldwide et SecNumCloud) ; support N2/N3 et diagnostic bas niveau (Linux, QEMU/VMware, PostgreSQL, Nginx, HAProxy).
+          - MCO/MCS multi-régions (~8 régions publiques multi-AZ Europe/US/Asie, SecNumCloud et clouds privés dédiés défense) sur IaaS / TINA OS, S3 (Ceph puis Scality), IAM et Billing ; support N2/N3 et diagnostic bas niveau (Linux, QEMU/VMware, PostgreSQL, Nginx, HAProxy).
           - Pilotage et automatisation de migrations critiques de ressources clientes lors de changements de salles datacenter, ainsi que des communications de maintenance client (Python, Mailchimp puis Brevo).
           - Automatisation des déploiements de plateformes publiques/privées (SaltStack, Terraform, Python, Bash, GitLab CI, Consul) ; rôles de Git Master et Release Master.
 
