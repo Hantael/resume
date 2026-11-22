@@ -1,7 +1,7 @@
 # yaml-language-server: $schema=https://raw.githubusercontent.com/rendercv/rendercv/refs/tags/v2.8/schema.json
 cv:
   name: Marine MORARD
-  headline: Senior Site Reliability Engineer (SRE) — Cloud Souverain, Kubernetes (KaaS), Compute & AI Infra
+  headline: Senior Site Reliability Engineer (SRE) — Cloud Souverain, Kubernetes (KaaS) & Services Managés
   location: Île-de-France (Orphin / Paris)
   email: marine.morard@gmail.com
   social_networks:
@@ -12,7 +12,7 @@ cv:
   sections:
     Profil:
       - >-
-        Ingénieure SRE Senior avec près de 10 ans d'expérience en production sur des infrastructures cloud souveraines et critiques (3DS Outscale, S3NS — SecNumCloud, ISO 27001, HDS). Spécialisée sur le cycle complet build/run des plateformes Kubernetes (CAPI, KaaS), Compute et IaaS, la gestion d'incidents majeurs (P0/P1), la résilience multi-DC et l'automatisation (Python, Bash, Nix/NixOS, Terraform, SaltStack). Orientée terrain, mentoring technique et élimination du toil, avec un fort investissement sur l'infrastructure IA et les approches AIOps / LLM-Ops (agents, protocole MCP).
+        Ingénieure SRE Senior avec près de 10 ans d'expérience en production sur des infrastructures cloud souveraines et critiques (3DS Outscale, S3NS — SecNumCloud, ISO 27001, HDS). Profil très terrain orienté gestion d'incidents majeurs (P0/P1), fiabilité de plateformes Kubernetes (CAPI, KaaS) et IaaS, résilience multi-DC et automatisation (Python, Bash, Nix/NixOS, Terraform, SaltStack).
 
     Expériences professionnelles:
       - company: Thales Cloud Sécurisé (S3NS)
@@ -22,11 +22,10 @@ cv:
         location: Paris
         summary: "*Joint-venture Thales & Google Cloud*"
         highlights:
-          - Pilotage opérationnel (MCO/MCS) et haute disponibilité d'un périmètre critique couvrant Compute (GCE, Borg, GKE) et plateformes IA (Vertex AI, Gemini 1P & 3P), incluant les instances GPU A3 de la plateforme interne d'outillage IA.
-          - Astreintes 24/7, résolution d'incidents majeurs (P0/P1) de bout en bout, conduite des revues post-incidents (post-mortems) et suivi des plans d'actions.
-          - Développement d'outils d'automatisation (Python, Bash) pour réduire le toil ; prototypage de workflows assistés par IA (LLM, protocole MCP) pour accélérer le diagnostic d'incidents.
+          - MCO/MCS et haute disponibilité en production sur un périmètre critique Compute (GCE, Borg, GKE) et plateformes IA (Vertex AI, Gemini 1P & 3P, instances GPU A3 de la plateforme interne d'outillage IA).
+          - Astreintes 24/7 et résolution d'incidents majeurs (P0/P1) en collaboration technique directe avec les équipes Google (R&D/ops, synchronisation multi-fuseaux US) ; conduite des post-mortems et plans d'amélioration continue.
+          - Automatisation d'opérations (Python, Bash) pour réduire le toil ; prototypage de workflows assistés par IA (LLM, protocole MCP) pour accélérer le diagnostic d'incidents.
           - Encadrement technique et mentoring au sein d'une équipe de 9 ingénieurs (CDI et prestataires) ; accompagnement à la montée en compétences d'équipes internationales sur des périmètres similaires (déplacements à l'étranger).
-          - Facilitation de la collaboration et des échanges opérationnels quotidiens en anglais avec les équipes Google (R&D et opérations), avec synchronisation multi-fuseaux horaires (US).
 
       - company: Thales Cloud Sécurisé (S3NS)
         position: Ingénieure SRE KaaS / Compute
@@ -34,12 +33,12 @@ cv:
         end_date: 2025-12
         location: Paris
         highlights:
-          - Construction et exploitation *full GitOps* d'une plateforme KaaS souveraine via Kubernetes Cluster API (CAPI), Nix / NixOS, FluxCD, pipelines Woodpecker CI / Gitea et observabilité Prometheus / Grafana.
-          - "Accompagnement transverse SRE : mise en place d'un cluster de base de données résilient (MariaDB / MaxScale) distribué sur 3 clusters Kubernetes dans 3 datacenters sous contraintes applicatives (iTop)."
-          - Définition des SLI/SLO, runbooks et développement de scripts Bash d'automatisation pour le bootstrap et les exercices de résilience / redémarrage à froid DC (ISON, DiRT).
+          - Construction, MCO et troubleshooting en production d'une plateforme KaaS souveraine en *full GitOps* (~60 à 90 clusters multi-DC / multi-zones) via Kubernetes Cluster API (CAPI), Nix / NixOS, FluxCD, Woodpecker CI / Gitea et Prometheus / Grafana.
+          - "Accompagnement transverse SRE : déploiement d'un cluster de base de données résilient (MariaDB / MaxScale) sur 3 clusters Kubernetes dans 3 datacenters sous contraintes applicatives (iTop)."
+          - Définition des SLI/SLO, runbooks et scripts Bash d'automatisation pour le bootstrap et les exercices de résilience / redémarrage à froid DC (ISON, DiRT).
 
       - company: 3DS Outscale (Dassault Systèmes)
-        position: Lead SRE — Équipe Marketplace
+        position: Lead SRE Marketplace
         start_date: 2023-01
         end_date: 2023-12
         location: Saint-Cloud
@@ -59,10 +58,10 @@ cv:
           - Automatisation des déploiements de plateformes publiques/privées (SaltStack, Terraform, Python, Bash, GitLab CI, Consul) ; rôles de Git Master et Release Master.
 
     Compétences techniques:
-      - label: Cloud Souverain, KaaS & IA
+      - label: Cloud Souverain, KaaS & IaaS
         details: Kubernetes (CAPI, GKE), Compute (GCE, Borg), IaaS (TINA OS, S3 Ceph/Scality, EC2, IAM, QEMU, VMware), GPU (A3, fGPUs), Vertex AI / Gemini, SecNumCloud / ISO 27001 / HDS.
       - label: SRE, Observabilité & BDD
-        details: MCO/MCS, astreintes 24/7, incidents P0/P1, SLI/SLO/SLA, post-mortems, DiRT/résilience, Prometheus, Grafana (alerting), Zabbix, PostgreSQL, MariaDB / MaxScale, Nginx, HAProxy, Consul.
+        details: MCO/MCS, astreintes 24/7, incidents P0/P1, SLI/SLO/SLA, post-mortems, DiRT/ISON, Prometheus, Grafana (alerting), Zabbix, PostgreSQL, MariaDB / MaxScale, Nginx, HAProxy, Consul.
       - label: IaC, GitOps & Automatisation
         details: Python, Bash, Linux, Nix / NixOS, Terraform, SaltStack, Ansible, FluxCD, GitLab CI, Woodpecker CI / Gitea, Git, workflows IA & agents (LLM, protocole MCP, n8n).
       - label: Langues
@@ -84,41 +83,41 @@ design:
   theme: engineeringclassic
   page:
     size: a4
-    top_margin: 1.15cm
-    bottom_margin: 1.15cm
-    left_margin: 1.25cm
-    right_margin: 1.25cm
+    top_margin: 1.2cm
+    bottom_margin: 1.2cm
+    left_margin: 1.2cm
+    right_margin: 1.2cm
     show_footer: false
     show_top_note: false
   typography:
     alignment: left
     font_size:
-      body: 8.9pt
-      name: 21.5pt
-      headline: 9.4pt
-      connections: 8.9pt
-      section_titles: 1.18em
-    line_spacing: 0.47em
+      body: 9.1pt
+      name: 22pt
+      headline: 9.6pt
+      connections: 9pt
+      section_titles: 1.2em
+    line_spacing: 0.49em
   header:
-    space_below_name: 0.15cm
-    space_below_headline: 0.15cm
-    space_below_connections: 0.28cm
+    space_below_name: 0.16cm
+    space_below_headline: 0.16cm
+    space_below_connections: 0.3cm
   section_titles:
-    space_above: 0.26cm
-    space_below: 0.13cm
+    space_above: 0.28cm
+    space_below: 0.14cm
   sections:
-    space_between_regular_entries: 0.54em
-    space_between_text_based_entries: 0.18em
+    space_between_regular_entries: 0.58em
+    space_between_text_based_entries: 0.2em
     show_time_spans_in:
       - expériences_professionnelles
   entries:
-    date_and_location_width: 5.65cm
+    date_and_location_width: 5.7cm
     space_between_columns: 0.25cm
     summary:
-      space_above: 0.04cm
-    highlights:
       space_above: 0.05cm
-      space_between_items: 0.055cm
+    highlights:
+      space_above: 0.06cm
+      space_between_items: 0.06cm
   templates:
     single_date: MONTH_NAME YEAR
     time_span: "(HOW_MANY_YEARS YEARS HOW_MANY_MONTHS MONTHS)"
