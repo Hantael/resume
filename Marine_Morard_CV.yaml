@@ -45,7 +45,7 @@ cv:
         summary: "*Cloud souverain qualifié SecNumCloud, ISO 27001 et HDS*"
         highlights:
           - Construction *from scratch* de l'infrastructure de la plateforme Marketplace (architecture, déploiement Kubernetes, Terraform, SaltStack, monitoring et alerting de production).
-          - "Première expérience de Lead SRE : structuration des standards d'exploitation et encadrement technique d'une équipe de 2 ingénieurs."
+          - "Première expérience de Lead SRE : structuration des standards d'exploitation et accompagnement technique au sein d'un binôme dédié."
 
       - company: 3DS Outscale (Dassault Systèmes)
         position: SRE — Ingénieure Système (Équipe COS — Continuity of Service)
