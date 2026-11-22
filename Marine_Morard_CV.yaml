@@ -1,0 +1,135 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/rendercv/rendercv/refs/tags/v2.8/schema.json
+cv:
+  name: Marine MORARD
+  headline: Senior Site Reliability Engineer (SRE) — Cloud Souverain, Compute & AI Infrastructure
+  location: Île-de-France (Orphin / Paris)
+  # Remplacez les custom_connections ci-dessous par vos vraies coordonnées :
+  # email: prenom.nom@domaine.fr
+  # phone: +33 6 00 00 00 00
+  # social_networks:
+  #   - network: LinkedIn
+  #     username: votre-identifiant-linkedin
+  custom_connections:
+    - fontawesome_icon: envelope
+      placeholder: "[EMAIL]"
+      url:
+    - fontawesome_icon: phone
+      placeholder: "[TELEPHONE]"
+      url:
+    - fontawesome_icon: linkedin
+      placeholder: "[LINKEDIN_URL]"
+      url:
+  sections:
+    Profil:
+      - >-
+        Ingénieure SRE Senior avec près de 10 ans d'expérience sur les infrastructures cloud souveraines et critiques (Outscale, S3NS). Spécialisée dans la fiabilité des plateformes Compute et Kubernetes, l'automatisation des opérations (Python, Bash) et la gestion d'incidents majeurs. Fortement investie dans l'élimination du toil et l'exploration des approches AIOps / LLM-Ops (orchestration d'agents, protocole MCP) pour industrialiser l'exploitation à grande échelle.
+
+    Expériences professionnelles:
+      - company: Thales Cloud Sécurisé (S3NS)
+        position: Lead SRE Compute & AI Infrastructure
+        start_date: 2026-01
+        end_date: present
+        location: Paris
+        summary: "*Joint-venture Thales & Google Cloud*"
+        highlights:
+          - Pilotage du maintien en condition opérationnelle (MCO) et de la haute disponibilité d'un périmètre critique couvrant les infrastructures Compute (GCE, Borg, GKE) et les plateformes IA (Vertex AI, Gemini 1P & 3P).
+          - Intégration et gestion opérationnelle des instances GPU haute performance (instances A3) hébergeant la plateforme interne d'outillage IA.
+          - Supervision des astreintes 24/7, coordination de la résolution des incidents majeurs et animation des revues post-incidents (post-mortems).
+          - Développement d'outils internes d'automatisation (Python, Bash) pour réduire le toil opérationnel ; exploration et prototypage de workflows assistés par IA (LLM, protocole MCP) pour faciliter le diagnostic d'incidents.
+          - Collaboration technique quotidienne en anglais avec les équipes R&D Google sur la fiabilité des briques Compute et Vertex AI, et coordination opérationnelle d'une équipe de 7 ingénieurs (CDI et prestataires).
+
+      - company: Thales Cloud Sécurisé (S3NS)
+        position: Ingénieure SRE KaaS / Compute
+        start_date: 2024-01
+        end_date: 2025-12
+        location: Paris
+        highlights:
+          - Déploiement, exploitation et fiabilisation des briques Kubernetes (GKE) et Compute dans un environnement cloud de confiance.
+          - Mise en place des indicateurs de fiabilité (SLI/SLO), de l'observabilité et des procédures d'escalade en phase de construction et de mise en production.
+
+      - company: 3DS Outscale (Dassault Systèmes)
+        position: Administratrice Systèmes et Réseaux / Ingénieure Infra
+        start_date: 2017-01
+        end_date: 2023-12
+        location: Saint-Cloud / Paris
+        summary: "*Cloud souverain qualifié SecNumCloud*"
+        highlights:
+          - Exploitation, maintenance et évolution des infrastructures systèmes et réseaux supportant le cloud souverain Outscale.
+          - Gestion des incidents de production, diagnostic bas niveau (Linux, réseau, stockage, virtualisation) et maintien de la continuité de service selon les exigences SecNumCloud.
+          - Automatisation des tâches d'administration et de déploiement via Python et Bash.
+
+    Compétences techniques:
+      - label: Cloud & IA Infra
+        details: Kubernetes (GKE), Compute distribué (GCE, Borg), Instances GPU (A3), Vertex AI / Gemini, Cloud Souverain (SecNumCloud).
+      - label: SRE & Opérations
+        details: MCO, SLI/SLO/SLA, astreintes 24/7, gestion de crise, post-mortems, observabilité, haute disponibilité.
+      - label: Automatisation & Dev
+        details: Python, Bash, Linux, Git, workflows IA & agents (LLM, protocole MCP, n8n).
+      - label: Langues
+        details: Français (natif), Anglais (courant technique et professionnel).
+
+    Formation & Certifications:
+      - institution: École des Technologies Numériques Avancées (ETNA)
+        area: Informatique
+        degree: Diplôme d'Ingénieur / Master
+        date: 2019
+        highlights:
+          - "Formation continue : Management (Thales), préparation certification Google Cloud Generative AI Leader, écosystème Kubernetes & AIOps."
+
+    Centres d'intérêt:
+      - Apiculture (gestion d'un rucher de 14 ruches, récolte et mise en pot), impression 3D et domotique.
+
+design:
+  theme: engineeringclassic
+  page:
+    size: a4
+    top_margin: 1.45cm
+    bottom_margin: 1.45cm
+    left_margin: 1.5cm
+    right_margin: 1.5cm
+    show_footer: false
+    show_top_note: false
+  typography:
+    alignment: left
+    font_size:
+      body: 9.6pt
+      name: 24pt
+      headline: 10pt
+      connections: 9.5pt
+      section_titles: 1.25em
+    line_spacing: 0.55em
+  header:
+    space_below_name: 0.22cm
+    space_below_headline: 0.22cm
+    space_below_connections: 0.4cm
+  section_titles:
+    space_above: 0.38cm
+    space_below: 0.2cm
+  sections:
+    space_between_regular_entries: 0.85em
+    space_between_text_based_entries: 0.25em
+  entries:
+    date_and_location_width: 4.8cm
+    space_between_columns: 0.4cm
+    summary:
+      space_above: 0.08cm
+    highlights:
+      space_above: 0.1cm
+      space_between_items: 0.09cm
+  templates:
+    single_date: MONTH_NAME YEAR
+
+locale:
+  language: french
+  present: Présent
+
+settings:
+  current_date: today
+  render_command:
+    output_folder: rendercv_output
+    typst_path: OUTPUT_FOLDER/Marine_Morard_CV.typ
+    pdf_path: OUTPUT_FOLDER/Marine_Morard_CV.pdf
+    markdown_path: OUTPUT_FOLDER/Marine_Morard_CV.md
+    html_path: OUTPUT_FOLDER/Marine_Morard_CV.html
+    png_path: OUTPUT_FOLDER/Marine_Morard_CV.png
+  pdf_title: Marine MORARD - CV
