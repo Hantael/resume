@@ -85,13 +85,57 @@ def format_date_part(value: Any, present_label: str = "Présent") -> str:
     return text
 
 
-def format_date_range(entry: dict[str, Any], present_label: str = "Présent") -> str:
+def parse_ym(value: Any, today_ref: date) -> tuple[int, int] | None:
+    if value is None or value == "":
+        return None
+    if isinstance(value, int):
+        return (value, 1)
+    text = str(value).strip()
+    if text.lower() == "present":
+        return (today_ref.year, today_ref.month)
+    m = re.fullmatch(r"(\d{4})-(\d{2})(?:-\d{2})?", text)
+    if m:
+        return (int(m.group(1)), int(m.group(2)))
+    return None
+
+
+def compute_time_span_fr(start_val: Any, end_val: Any, today_ref: date) -> str:
+    start_ym = parse_ym(start_val, today_ref)
+    end_ym = parse_ym(end_val, today_ref)
+    if not start_ym or not end_ym:
+        return ""
+    total_months = (end_ym[0] - start_ym[0]) * 12 + (end_ym[1] - start_ym[1]) + 1
+    if total_months <= 0:
+        return ""
+    years, months = divmod(total_months, 12)
+    parts: list[str] = []
+    if years == 1:
+        parts.append("1 an")
+    elif years > 1:
+        parts.append(f"{years} ans")
+    if months >= 1:
+        parts.append(f"{months} mois")
+    return " ".join(parts)
+
+
+def format_date_range(
+    entry: dict[str, Any],
+    present_label: str = "Présent",
+    show_time_span: bool = False,
+) -> str:
     if entry.get("date") is not None and entry.get("date") != "":
         return format_date_part(entry["date"], present_label)
     start = format_date_part(entry.get("start_date"), present_label)
     end = format_date_part(entry.get("end_date"), present_label)
     if start and end:
-        return f"{start} – {end}"
+        base = f"{start} – {end}"
+        if show_time_span:
+            span = compute_time_span_fr(
+                entry.get("start_date"), entry.get("end_date"), date.today()
+            )
+            if span:
+                return f"{base} ({span})"
+        return base
     return start or end
 
 
@@ -198,7 +242,11 @@ def build_contact_chips(cv: dict[str, Any]) -> str:
     return "\n".join(chips)
 
 
-def render_experience_section(entries: list[dict[str, Any]], present_label: str) -> str:
+def render_experience_section(
+    entries: list[dict[str, Any]],
+    present_label: str,
+    show_time_span: bool = False,
+) -> str:
     # Group consecutive roles at the same company into clean company blocks
     groups: list[dict[str, Any]] = []
     for entry in entries:
@@ -231,7 +279,7 @@ def render_experience_section(entries: list[dict[str, Any]], present_label: str)
         )
         roles_html: list[str] = []
         for role in group["roles"]:
-            date_str = format_date_range(role, present_label)
+            date_str = format_date_range(role, present_label, show_time_span=show_time_span)
             highlights = role.get("highlights") or []
             bullets_html = "".join(
                 f"<li>{md_inline(item)}</li>" for item in highlights
@@ -330,6 +378,7 @@ def render_section(
     entries: list[Any],
     present_label: str,
     degree_template: str,
+    show_time_span: bool = False,
 ) -> str:
     if not entries:
         return ""
@@ -339,7 +388,7 @@ def render_section(
         paragraphs = "".join(f'<p class="prose-text">{md_inline(item)}</p>' for item in entries)
         body_html = f'<div class="prose-card">{paragraphs}</div>'
     elif isinstance(first, dict) and "company" in first:
-        body_html = render_experience_section(entries, present_label)
+        body_html = render_experience_section(entries, present_label, show_time_span=show_time_span)
     elif isinstance(first, dict) and "label" in first and "details" in first:
         body_html = render_skills_section(entries)
     elif isinstance(first, dict) and "institution" in first:
@@ -365,6 +414,10 @@ def render_section(
 def build_html(data: dict[str, Any], png_names: list[str]) -> str:
     cv = data.get("cv") or {}
     locale = data.get("locale") or {}
+    design = data.get("design") or {}
+    show_time_spans_in = set(
+        (design.get("sections") or {}).get("show_time_spans_in") or []
+    )
     present_label = str(locale.get("present") or "Présent")
     degree_template = str(
         (locale.get("phrases") or {}).get("degree_with_area") or "DEGREE en AREA"
@@ -376,7 +429,16 @@ def build_html(data: dict[str, Any], png_names: list[str]) -> str:
 
     contact_chips = build_contact_chips(cv)
     sections_html = "\n".join(
-        render_section(sec_title, sec_entries, present_label, degree_template)
+        render_section(
+            sec_title,
+            sec_entries,
+            present_label,
+            degree_template,
+            show_time_span=(
+                sec_title.lower().replace(" ", "_") in show_time_spans_in
+                or sec_title in show_time_spans_in
+            ),
+        )
         for sec_title, sec_entries in (cv.get("sections") or {}).items()
     )
 

@@ -85,8 +85,8 @@ design:
     size: a4
     top_margin: 1.15cm
     bottom_margin: 1.15cm
-    left_margin: 1.35cm
-    right_margin: 1.35cm
+    left_margin: 1.25cm
+    right_margin: 1.25cm
     show_footer: false
     show_top_note: false
   typography:
@@ -108,9 +108,11 @@ design:
   sections:
     space_between_regular_entries: 0.54em
     space_between_text_based_entries: 0.18em
+    show_time_spans_in:
+      - expériences_professionnelles
   entries:
-    date_and_location_width: 4.5cm
-    space_between_columns: 0.35cm
+    date_and_location_width: 5.65cm
+    space_between_columns: 0.25cm
     summary:
       space_above: 0.04cm
     highlights:
@@ -118,6 +120,7 @@ design:
       space_between_items: 0.055cm
   templates:
     single_date: MONTH_NAME YEAR
+    time_span: "(HOW_MANY_YEARS YEARS HOW_MANY_MONTHS MONTHS)"
 
 locale:
   language: french
