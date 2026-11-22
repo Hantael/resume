@@ -35,7 +35,7 @@ cv:
         highlights:
           - Construction et exploitation *full GitOps* d'une plateforme KaaS souveraine via Kubernetes Cluster API (CAPI), Nix / NixOS, FluxCD, pipelines Woodpecker CI / Gitea et observabilité Prometheus / Grafana.
           - "Accompagnement transverse SRE : mise en place d'un cluster de base de données résilient (MariaDB / MaxScale) distribué sur 3 clusters Kubernetes dans 3 datacenters sous contraintes applicatives (iTop)."
-          - Définition des SLI/SLO, runbooks et développement de scripts Bash d'automatisation pour le bootstrap, l'isolation (ISON) et les exercices de résilience / reprise d'activité (DiRT).
+          - Définition des SLI/SLO, runbooks et développement de scripts Bash d'automatisation pour le bootstrap et les exercices de résilience / redémarrage à froid DC (ISON, DiRT).
 
       - company: 3DS Outscale (Dassault Systèmes)
         position: Lead SRE — Équipe Marketplace
